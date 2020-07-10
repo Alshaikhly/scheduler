@@ -6,7 +6,7 @@ export default function useVisualMode(initial) {
   
 
   function transition (newMode, replace = false) {
-    if (replace) {  
+    if (replace) {
       setMode(newMode)
     } else {
       setMode(newMode)
