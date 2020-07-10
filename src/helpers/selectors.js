@@ -1,14 +1,14 @@
 export function getAppointmentsForDay(state, day) {
   let appointmentsArray = []
   const appointmentData = []
-  const days = state.days.map(dayObj => {
+  state.days.map(dayObj => {
     if (dayObj.name === day) {
       appointmentsArray = dayObj.appointments
     }
   })
   for(let appointment of appointmentsArray) {
     for(const [key,value] of Object.entries(state.appointments)) {
-      if (appointment == key) {
+      if (appointment.toString() === key) {
         appointmentData.push(value)
       }
 
@@ -17,4 +17,10 @@ export function getAppointmentsForDay(state, day) {
   }
   
   return appointmentData;
+}
+
+export function getInterview(state, interview) {
+  console.log(interview)
+  return (interview && {...interview, interviewer: state.interviewers[interview.interviewer]})
+
 }
