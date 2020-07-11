@@ -11,9 +11,10 @@ export default function useVisualMode(initial) {
     } else {
       setMode(newMode)
       setHistory([...history, newMode])
+      
   }
 }
-
+console.log(history)
   function back() {
     if (history.length > 0) {
       history.pop()
