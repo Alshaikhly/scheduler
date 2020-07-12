@@ -14,7 +14,7 @@ export default function useVisualMode(initial) {
       
   }
 }
-console.log(history)
+
   function back() {
     if (history.length > 0) {
       history.pop()
