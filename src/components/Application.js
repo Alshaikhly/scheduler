@@ -46,7 +46,6 @@ export default function Application(props) {
 <DayList
   days={state.days}
   day={state.day}
-  // spots={state.days}
   setDay={setDay}
 />
 </nav>
@@ -58,6 +57,7 @@ export default function Application(props) {
       </section>
       <section className="schedule">
        {apppointmentList}
+       <Appointment />
       </section>
     </main>
   );

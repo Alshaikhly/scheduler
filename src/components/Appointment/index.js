@@ -32,21 +32,12 @@ export default function Appointment(props) {
     back()
   };
 
-
-  function onComplete() {
-    transition(SAVING)
-  };
-
   function onEdit() {
     transition(EDIT)
   };
 
   function onConfirm() {
     transition(CONFIRM)
-  };
-
-  function onComplete() {
-    transition(EMPTY)
   };
 
   function save(name, interviewer) {
@@ -73,7 +64,7 @@ export default function Appointment(props) {
   };
 
   return (
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time}/>
         {mode === EMPTY && <Empty onAdd={onAdd} />}
         {mode === SHOW && (
