@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles.scss";
-import Header from "./Header"
-import Show from "./Show"
-import Empty from "./Empty"
-import Form from "./Form"
-import Status from "./Status"
-import Confirm from "./Confirm"
-import Error from "./Error"
-import useVisualMode from "../../hooks/useVisualMode"
+import Header from "./Header";
+import Show from "./Show";
+import Empty from "./Empty";
+import Form from "./Form";
+import Status from "./Status";
+import Confirm from "./Confirm";
+import Error from "./Error";
+import useVisualMode from "../../hooks/useVisualMode";
 
 // these variales are used for tranisitioning between components
 const EMPTY = "EMPTY";
@@ -15,10 +15,10 @@ const SHOW = "SHOW";
 const CREATE= "CREATE";
 const SAVING = "SAVING";
 const EDIT = "EDIT";
-const DELETING = "DELETING"
-const CONFIRM = "CONFIRM"
-const ERROR_SAVE = "ERROR_SAVE"
-const ERROR_DELETE = "ERROE_DELETE"
+const DELETING = "DELETING";
+const CONFIRM = "CONFIRM";
+const ERROR_SAVE = "ERROR_SAVE";
+const ERROR_DELETE = "ERROE_DELETE";
 
 export default function Appointment(props) {
   const { mode, transition, back } = useVisualMode(
@@ -27,19 +27,19 @@ export default function Appointment(props) {
   
   // functions used for transitioning based on actions taken by the user
   function onAdd() {
-    transition(CREATE)
+    transition(CREATE);
   };
 
   function onCancel() {
-    back()
+    back();
   };
 
   function onEdit() {
-    transition(EDIT)
+    transition(EDIT);
   };
 
   function onConfirm() {
-    transition(CONFIRM)
+    transition(CONFIRM);
   };
 
   function edit(name, interviewer){
@@ -67,7 +67,7 @@ export default function Appointment(props) {
   // checks to see if the warning messgae is shown or not to perform the delete action based on the user choice
   function onDelete() {
     if (mode === SHOW) { 
-    onConfirm()
+    onConfirm();
     }
     if (mode === CONFIRM) {
     transition(DELETING, true)

@@ -21,7 +21,7 @@ export default function DayListItem(props) {
         break;
     }
     return finalFormat;
-  }
+  };
 
   const dayClass = classnames("day-list__item", {
     "day-list__item--selected": props.selected,
@@ -35,4 +35,4 @@ export default function DayListItem(props) {
   <h3 className="text--light">{formatSpots(props.spots)}</h3>
     </li>
   );
-}
+};

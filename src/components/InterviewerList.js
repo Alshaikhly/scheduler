@@ -20,8 +20,8 @@ export default function InterviewerList(props) {
         selected={interviewer.id === props.value}
         setInterviewer={event => props.onChange(interviewer.id)} 
       />
-    )
-  })
+    );
+  });
 
   const InterviewerClass = classnames("interviewers", {
     "interviewers__item--selected": props.selected
@@ -32,7 +32,7 @@ export default function InterviewerList(props) {
       <h4 className="interviewers__header text--light">interviewers</h4>
       <ul className="interviewers__list">{interviewers}</ul>
     </section>
-  )
+  );
 
-}
+};
 

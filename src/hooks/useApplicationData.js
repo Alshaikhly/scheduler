@@ -15,9 +15,9 @@ export default function useApplicationData() {
   const setDay = day => setState({ ...state, day });
 
 
-  const promiseDays = axios.get('/api/days')
-  const promiseAppointments = axios.get('/api/appointments')
-  const promiseInterviewers = axios.get('/api/interviewers')
+  const promiseDays = axios.get('/api/days');
+  const promiseAppointments = axios.get('/api/appointments');
+  const promiseInterviewers = axios.get('/api/interviewers');
 
   useEffect(() => {
    Promise.all([
@@ -45,17 +45,17 @@ export default function useApplicationData() {
         for(let appointment of day.appointments) {
           if (appointment === id) {
             day.spots--;
-          }
-        }
+          };
+        };
         
-      })
+      });
       return daysArr;
-    }
+    };
     return axios.put(`/api/appointments/${id}`, { interview })
       .then(() => {
         spotsDecrease()
         setState({...state, appointments});
-      })
+      });
   };
 
   // this function was created to avoid decreasing the spots after a confirmed edit
@@ -71,8 +71,8 @@ export default function useApplicationData() {
     return axios.put(`/api/appointments/${id}`, { interview })
       .then(() => {
         setState({...state, appointments});
-      })
-  }
+      });
+  };
 
   function cancelInterview(id) {
     const appointment = {
@@ -93,17 +93,17 @@ export default function useApplicationData() {
           }
         }
         
-      })
+      });
       return daysArr;
-    } 
+    };
     
     return axios.delete(`/api/appointments/${id}`)
       .then(() => {
         spotsIncrease()
         setState({...state, appointments})
-      })
+      });
     
-  }
+  };
 
-  return {state, setDay, bookInterview, cancelInterview, editInterview}
-}
+  return {state, setDay, bookInterview, cancelInterview, editInterview};
+};
