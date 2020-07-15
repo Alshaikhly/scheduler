@@ -5,12 +5,12 @@ Users can book, edit or delete an interview using an easy-to-navigate single pag
 
 ## Tech Stack
 
-React.js
-Webpack
-Babel
-Axios
-Storybook
-Jest testing library
+React.js/
+Webpack/
+Babel/
+Axios/
+Storybook/
+Jest testing library/
 Cypress for end to end testing
 
 ## Setup
