@@ -1,3 +1,5 @@
+// testing the nav bar navigationg with Cypress
+
 describe("Navigation", () => {
   it("should visit root", () => {
     cy.visit("/");

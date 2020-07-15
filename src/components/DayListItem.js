@@ -5,6 +5,7 @@ import classnames from "classnames";
 
 export default function DayListItem(props) {
 
+  //formatSpots decides the text that will represent the spots remaining
   const formatSpots = (spots) => {
     let finalFormat;
     

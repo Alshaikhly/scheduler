@@ -1,3 +1,5 @@
+
+// Fixture data provided to use for unit/integration tests
 const fixtures = {
   days: [
     {
@@ -53,6 +55,7 @@ const fixtures = {
   }
 };
 
+// Mock calls to axios used for testing 
 export default {
   defaults: { baseURL: "" },
   get: jest.fn(url => {
@@ -89,4 +92,4 @@ export default {
   delete: jest.fn(url => {
     return Promise.resolve()
   })
-}
+};

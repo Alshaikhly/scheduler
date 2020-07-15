@@ -1,3 +1,5 @@
+
+// return an array of apointments to let us map through it and show each appointment
 export function getAppointmentsForDay(state, day) {
   let appointmentsArray = []
   const appointmentData = []
@@ -19,6 +21,7 @@ export function getAppointmentsForDay(state, day) {
   return appointmentData;
 }
 
+// return an array of interviewers to let us map through it and show each interviewer
 export function getInterviewersForDay(state, day) {
   let interviewersArray = [];
   const interviewerData = [];

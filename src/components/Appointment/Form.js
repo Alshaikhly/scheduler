@@ -17,6 +17,7 @@ export default function Form(props) {
     reset()
   }
 
+  // responsible for checking the form to see if the student name input is empty. shows an error when it's empty
   function validate() {
     if (name === "") {
       setError("Student name cannot be blank");

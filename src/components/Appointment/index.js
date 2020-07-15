@@ -9,6 +9,7 @@ import Confirm from "./Confirm"
 import Error from "./Error"
 import useVisualMode from "../../hooks/useVisualMode"
 
+// these variales are used for tranisitioning between components
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE= "CREATE";
@@ -23,7 +24,8 @@ export default function Appointment(props) {
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
-
+  
+  // functions used for transitioning based on actions taken by the user
   function onAdd() {
     transition(CREATE)
   };
@@ -62,6 +64,7 @@ export default function Appointment(props) {
      .catch(() => transition(ERROR_SAVE, true))
   };
 
+  // checks to see if the warning messgae is shown or not to perform the delete action based on the user choice
   function onDelete() {
     if (mode === SHOW) { 
     onConfirm()

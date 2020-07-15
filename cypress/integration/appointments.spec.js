@@ -1,3 +1,5 @@
+// A series of Cypress-based tests to test booking, editing and deleting an interview
+
 describe("Appointments", () => {
   beforeEach(() => {
     cy.request("GET", "/api/debug/reset")

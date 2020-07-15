@@ -1,7 +1,6 @@
 import React from "react";
 import classnames from "classnames"
 import "components/Button.scss";
-import { render } from "@testing-library/react";
 
 export default function Button(props) {
    

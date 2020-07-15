@@ -8,6 +8,7 @@ import { getAppointmentsForDay, getInterviewersForDay, getInterview } from "../h
 
 export default function Application(props) {
   
+  // importing all the states from useApplicationData
   const {
     state,
     setDay,

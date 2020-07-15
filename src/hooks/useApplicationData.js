@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
+
+
+// this function creates all the main states for our application and keeps track of their history
 
 export default function useApplicationData() {
   const [state, setState] = useState({
@@ -35,7 +38,7 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment
     };
-
+    // this function is called after we get a positive feedback from the server request to decrease the number of spots
     const spotsDecrease = () => {
       const daysArr = [...state.days]
       daysArr.map(day => {
@@ -55,6 +58,7 @@ export default function useApplicationData() {
       })
   };
 
+  // this function was created to avoid decreasing the spots after a confirmed edit
   function editInterview(id, interview) {
     const appointment = {
       ...state.appointments[id],
