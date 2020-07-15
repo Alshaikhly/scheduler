@@ -47,5 +47,5 @@ npm run storybook
 ```
 ## Application Screenshots
 
-["Selecting a day and adding a new appointment"](https://github.com/Alshaikhly/scheduler/blob/master/docs/Main%20page%20&%20new%20appointment.png?raw=true)
-["Ability ti delete an interview with a warning message"](https://github.com/Alshaikhly/scheduler/blob/master/docs/deleting%20interview.png?raw=true)
+!["Selecting a day and adding a new appointment"](https://github.com/Alshaikhly/scheduler/blob/master/docs/Main%20page%20&%20new%20appointment.png?raw=true)
+!["Ability ti delete an interview with a warning message"](https://github.com/Alshaikhly/scheduler/blob/master/docs/deleting%20interview.png?raw=true)
